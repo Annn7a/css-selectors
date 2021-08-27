@@ -1,0 +1,167 @@
+body {
+  background-image: linear-gradient(
+    to right top,
+    #2b63b6,
+    #0091dd,
+    #00b9c9,
+    #00d982,
+    #a8eb12
+  );
+  width: auto;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+.main {
+  width: 90%;
+  background-color: #f9f9fa;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+h1 {
+  background: -webkit-linear-gradient(
+    #051937,
+    #003a5d,
+    #005c65,
+    #007c49,
+    #6b9311
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-family: Poppins;
+  font-size: 60px;
+  margin-left: 50px;
+}
+.btn-home {
+  background-color: #f9f9fa;
+  border: none;
+  width: 150px;
+  height: 40px;
+  font-family: Poppins;
+  font-size: 20px;
+  color: black;
+  margin: 30px;
+}
+.flex-elements {
+  display: flex;
+  align-items: center;
+}
+p {
+  font-size: 25px;
+  font-family: Poppins;
+  margin-left: 70px;
+  margin-right: 50px;
+}
+.paragraphs {
+  width: 900px;
+}
+.image-center {
+  margin-left: 50px;
+  width: 600px;
+  height: 450px;
+}
+.list {
+  font-size: 20px;
+  font-family: Poppins;
+  margin-left: 100px;
+  width: 500px;
+  margin-top: 40px;
+}
+.phr {
+  font-size: 20px;
+  font-family: Poppins;
+  margin-left: 70px;
+  margin-right: 50px;
+}
+
+#customers {
+  font-family: Poppins;
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3b6ab8;
+  color: white;
+}
+
+code {
+  background: #eef0f0;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+h2 {
+  text-align: center;
+  margin-top: 90px;
+  font-family: Poppins;
+}
+
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: #4ca8cc;
+}
+
+/* mouse over link */
+a:hover {
+  color: #ade754;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+.important-list {
+  font-size: 20px;
+  font-family: Poppins;
+  margin-left: 70px;
+  width: 600px;
+  margin-top: 40px;
+  line-height: 1.6;
+}
+h3 {
+  font-size: 24px;
+  font-family: Poppins;
+  margin-left: 250px;
+  margin-top: 80px;
+}
+.image-flex {
+  margin-top: 80px;
+  margin-left: 70px;
+}
+footer {
+  background-color: #52b5c7;
+  width: 100%;
+  height: 70px;
+  color: white;
+  font-family: Poppins;
+  font-size: 18px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+.style-footer {
+  color: white;
+  font-family: Poppins;
+  font-size: 18px;
+}

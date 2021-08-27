@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS selectors and specificity</title>
+    <link rel="stylesheet" href="./resources/CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <button class="btn-home">CSS Home</button>
+
+      <div class="flex-elements">
+        <h1>CSS selectors <br />and specificity</h1>
+        <img
+          src="https://assets-global.website-files.com/5bfd6f4468ee7943c2d331dd/5fe1be8eca82022dcdac9a05_%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-12-22%20%D0%B2%2012.05.00.png"
+        />
+      </div>
+      <div class="paragraphs">
+        <p>
+          Specificity is the means by which browsers decide which CSS property
+          values are the most relevant to an element and, therefore, will be
+          applied. Specificity is based on the matching rules which are composed
+          of different sorts of CSS selectors.
+        </p>
+      </div>
+      <div class="flex-elements">
+        <img
+          src="https://yourdigitalsolution.com.au/wp-content/uploads/2020/05/Web-Design.png"
+          class="image-center"
+        />
+        <div class="list">
+          <h2>
+            The following list of selector types increases by specificity:
+          </h2>
+          <ol>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors"
+                target="_blank"
+                >Type selectors</a
+              >
+              (e.g., <code>h1</code>) and pseudo-elements (e.g.,
+              <code>::before</code>).
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors"
+                target="_blank"
+                >Class selectors</a
+              >
+              (e.g.,<code>.example</code> ), attributes selectors (e.g.,
+              <code>[type="radio"]</code>) and pseudo-classes (e.g.,<code
+                >:hover</code
+              >
+              ).
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors"
+                target="_blank"
+                >ID selectors</a
+              >(e.g.,<code> #example</code>).
+            </li>
+          </ol>
+        </div>
+      </div>
+      <p class="phr">
+        Universal selector (<code>*</code>), combinators (<code
+          >+, >, ~, ' ', ||</code
+        >) and negation pseudo-class (<code>:not()</code>) have no effect on
+        specificity. (The selectors declared inside <code>:not()</code> do,
+        however.)
+      </p>
+
+      <h2>
+        If there are multiple selectors that target a specific element,<br />
+        the most specific one will always take preference.
+      </h2>
+      <table id="customers">
+        <tr>
+          <th>Selector</th>
+          <th>Symbol(s)</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors"
+              target="_blank"
+              >Universal Selector</a
+            >
+          </td>
+          <td><i>* {}</i></td>
+          <td>
+            Matches elements of any type. Useful if you want elements of your
+            webpage to have overarching styles at low specificity to be
+            overwritten by more specific selectors.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors"
+              target="_blank"
+              >Type Selectors</a
+            >
+          </td>
+          <td><i>h1, p, section, etc.</i></td>
+          <td>
+            Selects all elements of a given type throught the document. This
+            will be commonly used to style larger chunks of the same type at
+            face value.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors"
+              target="_blank"
+              >Class Selectors</a
+            >
+          </td>
+          <td><i>.example {}</i></td>
+          <td>
+            Selects elements based on their Class attribute. This is denoted by
+            a 'class=""' in the opening tag of the HTML element. As class
+            elements can be used more than once, it is useful for styling
+            elements that you wish to have the same semantic purpose.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors"
+              target="_blank"
+              >ID Selectors</a
+            >
+          </td>
+          <td><i>#example {}</i></td>
+          <td>
+            Selects elements based on their id attribute. This is denoted by a
+            'id=""' in the opening tag of the HTML element. This selectors
+            practical difference from the class selector is that a specific id
+            selector can only be used once. These selectors are the most
+            specific of those that are commonly used, and thus will be often
+            used to style individual elements on your webpage.
+          </td>
+        </tr>
+        <tr>
+          <td>!important</td>
+          <td><i> !important</i></td>
+          <td>
+            Although not specifically a selector, this rule performs a
+            comparable function in that it overrides any other style
+            declarations present on a given element. This should almost never be
+            used as it is makes debugging significantly more difficult.
+          </td>
+        </tr>
+        <tr></tr>
+      </table>
+      <div class="flex-elements">
+        <div>
+          <h3>Some rules of thumb:</h3>
+
+          <ul class="important-list">
+            <li>
+              <b>Always</b> look for a way to use specificity before even
+              considering <code>!important</code>
+            </li>
+            <li>
+              <b>Only</b> use <code>!important</code> on page-specific CSS that
+              overrides foreign CSS (from external libraries, like Bootstrap or
+              normalize.css).
+            </li>
+            <li>
+              <b>Never</b> use<code>!important</code> when you're writing a
+              plugin/mashup.
+            </li>
+            <li><b>Never</b> use<code>!important</code> on site-wide CSS.</li>
+          </ul>
+        </div>
+        <img
+          src="https://idreamdevelopers.com/wp-content/uploads/2020/03/mob-app.png"
+          class="image-flex"
+        />
+      </div>
+      <footer>
+        <p class="style-footer">© 2021 CSS Selectors 🤍 by Annn7a</p>
+      </footer>
+    </div>
+  </body>
+</html>
