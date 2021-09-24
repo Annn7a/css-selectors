@@ -189,9 +189,69 @@
           class="image-flex"
         />
       </div>
+      <br />
+      <div class="listJs">
+        <ul>
+          <li>
+            What is !important?<br /><br />
+            <span class="spanList">
+              The !important rule in CSS is used to add more importance to a
+              property/value than normal. In fact, if you use the !important
+              rule, it will override ALL previous styling rules for that
+              specific property on that element! </span
+            ><br /><a class="spanList"
+              ><button id="myBtn1">-> Example</button></a
+            >
+            <br />
+            <img
+              src="./public/images/ex1.png"
+              width="339"
+              height="244"
+              id="example1"
+            />
+          </li>
+          <br />
+          <li>
+            Important About !important<br /><br />
+
+            <span class="spanList">
+              The only way to override an !important rule is to include another
+              !important rule on a declaration with the same (or higher)
+              specificity in the source code - and here the problem starts! This
+              makes the CSS code confusing and the debugging will be hard,
+              especially if you have a large style sheet!</span
+            ><br /><a class="spanList">
+              <button id="myBtn2">-> Example</button></a
+            ><br /><img
+              src="./public/images/ex2.png"
+              width="343"
+              height="248"
+              id="example2"
+            />
+          </li>
+          <br />
+          <li>
+            Maybe One or Two Fair Uses of !important<br /><br />
+            <span class="spanList">
+              One way to use !important is if you have to override a style that
+              cannot be overridden in any other way. This could be if you are
+              working on a Content Management System (CMS) and cannot edit the
+              CSS code. Then you can set some custom styles to override some of
+              the CMS styles.</span
+            ><br /><a class="spanList">
+              <button id="myBtn3">-> Example</button> <br /><img
+                src="./public/images/ex3.png"
+                width="271"
+                height="136"
+                id="example3"
+            /></a>
+          </li>
+        </ul>
+      </div>
       <footer>
         <p class="style-footer">© 2021 CSS Selectors 🤍 by Annn7a</p>
       </footer>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

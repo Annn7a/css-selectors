@@ -165,3 +165,24 @@ footer {
   font-family: Poppins;
   font-size: 18px;
 }
+.listJs {
+  width: 700px;
+  margin: auto;
+  font-family: Poppins;
+  font-size: 18px;
+}
+.spanList {
+  font-size: 16px;
+}
+#example1,
+#example3,
+#example2 {
+  display: none;
+}
+button {
+  border-radius: 2px;
+  color: white;
+  background: #0091dd;
+  border: none;
+  height: 24px;
+}
